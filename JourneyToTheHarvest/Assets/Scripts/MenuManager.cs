@@ -6,7 +6,7 @@ public class MenuManager : MonoBehaviour
 {
     public void onPlayClick()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("mainField");
     }
     public void onQuitClick()
     {
