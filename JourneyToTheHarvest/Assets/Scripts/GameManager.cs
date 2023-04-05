@@ -55,11 +55,11 @@ public class GameManager : MonoBehaviour
         //player.Reset();
         coinText.text = "x" + 0;
         gameOverCanvas.gameObject.SetActive(false);
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("mainField");
     }
     public void onMenuClick()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("mainMenu");
     }
     public void gameOverCanvasSwitch(bool state)
     {
