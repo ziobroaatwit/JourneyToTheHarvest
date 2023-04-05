@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5dcda93a58cefcf4d85e8ea404027c20
+guid: 275303e12c5d99745a5d911b71f1c9c4
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,10 +9,10 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - SCE-PS3 Rodin LATIN
+  - FOT-Rodin ProN
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 1
+  fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
