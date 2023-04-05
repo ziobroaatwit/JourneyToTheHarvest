@@ -51,3 +51,6 @@ TagManager:
   - name: PlayerHead
     uniqueID: 4195510169
     locked: 0
+  - name: BlockSprite
+    uniqueID: 4207095803
+    locked: 0
