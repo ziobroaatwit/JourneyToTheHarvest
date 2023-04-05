@@ -49,8 +49,9 @@ public class PlayerControllerNeo : MonoBehaviour
     private float dashCoolDown = 5f;
     public float dashTimeLimit = .5f;
     private float dashTime = .5f;
-    private float defaultSpeed = 200f;
+    public float defaultSpeed = 150f;
     private bool dashing = false;
+    public Animator anim;
 
     private void Awake()
     {
@@ -64,6 +65,7 @@ public class PlayerControllerNeo : MonoBehaviour
     private void Start()
     {
         GameManager.instance().updateCoinText(getCoins());
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -114,10 +116,19 @@ public class PlayerControllerNeo : MonoBehaviour
             dashCoolDown = dashCoolDownLimit;
             GameManager.instance().updateDashText((int)dashCoolDown);
         }
+
     }
     void FixedUpdate()
     {
-        print(health);
+        if(input>0||input<0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+        //print(health);
         //Velocity change from player input.
         rb.velocity = new Vector2(input * speed * Time.deltaTime, rb.velocity.y);
         //Sprite Flipping from in Class in the Volcano Island assignment.
@@ -145,17 +156,16 @@ public class PlayerControllerNeo : MonoBehaviour
             else
                 rb.gravityScale = 2.5f;
             //if somehow either of the two booleans are not met, return gravity back to normal (I should have made this a variable.)
-
-            //if space is pressed, jump.
-            //needed to specify UnityEngine as my home PC keeps complaining if I just write Input
-            if (UnityEngine.Input.GetKey(KeyCode.Space))
-            {
-                Jump();
-            }
         }
         else
             wallJumpCooldown += Time.deltaTime;
         //While nothing is going on, count up on the jump cooldown.
+        //if space is pressed, jump.
+        //needed to specify UnityEngine as my home PC keeps complaining if I just write Input
+        if (UnityEngine.Input.GetKey(KeyCode.Space))
+        {
+            Jump();
+        }
     }
     
     //This is where the jump command truly lives.
