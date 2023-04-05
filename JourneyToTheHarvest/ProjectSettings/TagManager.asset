@@ -32,12 +32,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - SpookyZone
+  - FallZone
+  - SummerZone
+  - WinterZone
+  - SpringZone
+  - StartZone
   m_SortingLayers:
   - name: Default
     uniqueID: 0

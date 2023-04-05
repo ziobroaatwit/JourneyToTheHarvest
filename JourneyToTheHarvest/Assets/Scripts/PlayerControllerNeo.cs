@@ -28,7 +28,8 @@ public class PlayerControllerNeo : MonoBehaviour
     //Allows us to set the upward force of the wall jump
     public float wallJumpUpwardForce;
     //Box Collider reference
-    private BoxCollider2D boxCollider;
+    //this was a box but im bashing it into being a capsule
+    private CapsuleCollider2D boxCollider;
     //Mask required for isGrounded
     public LayerMask groundLayer;
     //Mask required for Wall Jumping
@@ -41,6 +42,10 @@ public class PlayerControllerNeo : MonoBehaviour
     private int health;
     //The max health they can have
     public int maxHealth;
+    //time to accelerate
+    public float timeToMaxSpeed;
+    private float accelRatePerSec;
+    private float forwardVelocity;
 
 
     //DASH MECHANIC VARIABLES from PA1
@@ -55,10 +60,12 @@ public class PlayerControllerNeo : MonoBehaviour
 
     private void Awake()
     {
+        accelRatePerSec = speed / timeToMaxSpeed;
+        forwardVelocity = 0f;
         //Gets the RigidBody component of the Player
         rb = GetComponent<Rigidbody2D>();
         //Gets the BoxCollider2D component of the player
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<CapsuleCollider2D>();
         health = maxHealth;
         coins = 0;
     }
@@ -130,7 +137,17 @@ public class PlayerControllerNeo : MonoBehaviour
         }
         //print(health);
         //Velocity change from player input.
-        rb.velocity = new Vector2(input * speed * Time.deltaTime, rb.velocity.y);
+        if(input>0||input<0)
+        {
+            forwardVelocity += accelRatePerSec * Time.deltaTime;
+            forwardVelocity = Mathf.Min(forwardVelocity, speed);
+        }
+        else
+        {
+            forwardVelocity -= accelRatePerSec * Time.deltaTime;
+            forwardVelocity = Mathf.Max(forwardVelocity, 0);
+        }
+        rb.velocity = new Vector2(input * forwardVelocity * Time.deltaTime, rb.velocity.y);
         //Sprite Flipping from in Class in the Volcano Island assignment.
         if (input > 0) //right?
         {
