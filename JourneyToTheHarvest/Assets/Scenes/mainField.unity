@@ -31045,7 +31045,7 @@ GameObject:
   - component: {fileID: 497562037}
   m_Layer: 0
   m_Name: Winter Zone Color Grading
-  m_TagString: Untagged
+  m_TagString: WinterZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31246,7 +31246,7 @@ GameObject:
   - component: {fileID: 507003273}
   m_Layer: 0
   m_Name: Spring Zone Color Grading
-  m_TagString: Untagged
+  m_TagString: SpringZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87647,7 +87647,7 @@ GameObject:
   - component: {fileID: 1132495218}
   m_Layer: 0
   m_Name: Start Zone Color Grading
-  m_TagString: Untagged
+  m_TagString: StartZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

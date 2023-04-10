@@ -71,7 +71,6 @@ public class PlayerControllerNeo : MonoBehaviour
     }
     private void Start()
     {
-        GameManager.instance().updateCoinText(getCoins());
         anim = GetComponent<Animator>();
     }
 
@@ -90,7 +89,6 @@ public class PlayerControllerNeo : MonoBehaviour
         if (dashCoolDown > 0)
         {
             dashCoolDown -= Time.deltaTime;
-            GameManager.instance().updateDashText((int)dashCoolDown);
         }
         //if shift is pressed and the cooldown is less than or equal to 0
         if (UnityEngine.Input.GetKeyDown(KeyCode.LeftShift) && dashCoolDown <= 0 && isGrounded() && !isWalled())
@@ -121,7 +119,6 @@ public class PlayerControllerNeo : MonoBehaviour
             speed = defaultSpeed;
             //the cooldown is reset?s
             dashCoolDown = dashCoolDownLimit;
-            GameManager.instance().updateDashText((int)dashCoolDown);
         }
 
     }
@@ -212,7 +209,6 @@ public class PlayerControllerNeo : MonoBehaviour
         if (collision.tag == "COIN")
         {
             coins += 1;
-            GameManager.instance().updateCoinText((int)getCoins());
         }
         if(collision.tag == "VICTORY")
         {

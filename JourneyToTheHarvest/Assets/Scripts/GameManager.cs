@@ -32,23 +32,8 @@ public class GameManager : MonoBehaviour
     {
 
         //player.Reset();
-        gameOverCanvas.gameObject.SetActive(false);
-        victoryCanvas.gameObject.SetActive(false);
-    }
-    public void updateCoinText(int value)
-    {
-        coinText.text = "x" + value;
-    }
-    public void updateDashText(int value)
-    {
-        if (value <= 0)
-        {
-            dashText.text = "Dash In: NOW";
-        }
-        else
-        {
-            dashText.text = "Dash In: " + value;
-        }
+        //gameOverCanvas.gameObject.SetActive(false);
+        //victoryCanvas.gameObject.SetActive(false);
     }
     public void onRestartClick()
     {
