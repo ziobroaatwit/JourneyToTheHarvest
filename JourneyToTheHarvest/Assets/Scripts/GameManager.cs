@@ -28,12 +28,14 @@ public class GameManager : MonoBehaviour
     public Canvas victoryCanvas;
     public TMP_Text coinText;
     public TMP_Text dashText;
+    public Canvas caveCanvas;
     private void Start()
     {
 
         //player.Reset();
         //gameOverCanvas.gameObject.SetActive(false);
         victoryCanvas.gameObject.SetActive(false);
+        caveCanvas.gameObject.SetActive(false);
     }
     public void onRestartClick()
     {
@@ -59,6 +61,10 @@ public class GameManager : MonoBehaviour
         victoryCanvas.gameObject.SetActive(state);
     }
 
+    public void caveCanvasSwitch(bool state)
+    {
+        caveCanvas.gameObject.SetActive(state);
+    }    
     public PlayerControllerNeo getPlayer()
     {
 
