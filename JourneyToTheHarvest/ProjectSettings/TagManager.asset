@@ -9,6 +9,7 @@ TagManager:
   - WinterZone
   - SpringZone
   - SummerZone
+  - FallZone
   layers:
   - Default
   - TransparentFX
