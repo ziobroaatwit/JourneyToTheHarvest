@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
         //player.Reset();
         //gameOverCanvas.gameObject.SetActive(false);
-        //victoryCanvas.gameObject.SetActive(false);
+        victoryCanvas.gameObject.SetActive(false);
     }
     public void onRestartClick()
     {
@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
     public void onMenuClick()
     {
         SceneManager.LoadScene("mainMenu");
+    }
+    public void onQuitClick()
+    {
+        Application.Quit();
     }
     public void gameOverCanvasSwitch(bool state)
     {

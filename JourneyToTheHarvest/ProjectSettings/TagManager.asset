@@ -10,6 +10,7 @@ TagManager:
   - SpringZone
   - SummerZone
   - FallZone
+  - VICTORY
   layers:
   - Default
   - TransparentFX
