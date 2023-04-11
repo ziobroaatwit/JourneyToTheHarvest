@@ -83,13 +83,13 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.82
+    m_Value: 0.79
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2.19
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.749
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -97,8 +97,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   highQualityFiltering:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   skipIterations:
     m_OverrideState: 0
     m_Value: 1
@@ -154,9 +154,9 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   red:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 2
+      <length>k__BackingField: 3
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -166,6 +166,15 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.6277372
+          value: 0.756654
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -185,9 +194,9 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   green:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 2
+      <length>k__BackingField: 3
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -197,6 +206,15 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.6332117
+          value: 0.84790874
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -216,9 +234,9 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   blue:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 2
+      <length>k__BackingField: 3
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -228,6 +246,15 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.6587591
+          value: 0.68821293
           inSlope: 1
           outSlope: 1
           tangentMode: 0

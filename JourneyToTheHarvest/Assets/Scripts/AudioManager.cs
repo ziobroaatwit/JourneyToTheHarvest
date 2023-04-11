@@ -42,6 +42,11 @@ public class AudioManager : MonoBehaviour
             print("Playing Spring Music");
             springSource.Play();
         }
+        if(collision.gameObject.tag == "SummerZone" && !summerSource.isPlaying)
+        {
+            print("Playing Summer Music");
+            summerSource.Play();
+        }
     }
     private void OnTriggerExit(Collider collision)
     {
@@ -54,6 +59,11 @@ public class AudioManager : MonoBehaviour
         {
             print("Stopping Spring Music");
             springSource.Stop();
+        }
+        if (collision.gameObject.tag == "SummerZone" && summerSource.isPlaying)
+        {
+            print("Stopping Summer Music");
+            summerSource.Stop();
         }
     }
 }
