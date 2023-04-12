@@ -7,6 +7,6 @@ public class CollectItem : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }
