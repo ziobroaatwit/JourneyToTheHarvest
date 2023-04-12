@@ -214,6 +214,10 @@ public class PlayerControllerNeo : MonoBehaviour
         {
             GameManager.instance().victoryCanvasSwitch(true);
         }
+        if (collision.tag == "Cave")
+        {
+            GameManager.instance().caveCanvasSwitch(true);
+        }
     }
     public int getCoins()
     {
