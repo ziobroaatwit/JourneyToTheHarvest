@@ -2,7 +2,7 @@
 # Journey to the Harvest
 ![JourneyToTheHarvestCoversmall](https://user-images.githubusercontent.com/54987160/231079820-4b354416-0f58-4b37-8abc-a469d0073e3e.png)
 
-A game in which you are a long way from home. The joy is in the journey, not the goal.
+A game in which you are a long way from home. The joy is in the journey, not the goal. A walking simulator.
 
 
 ## Features
